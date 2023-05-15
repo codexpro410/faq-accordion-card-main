@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+:root{
+    --vdark:hsl(238, 29%, 16%);
+    --sred:hsl(14, 88%, 65%);
+    /* grad */
+    --violet :hsl(273, 75%, 66%);
+    --blue:hsl(240, 73%, 65%);
+    /* text */
+    --tvdark:hsl(237, 12%, 33%);
+    --tgray:hsl(240, 6%, 50%);
+    /* divider */
+    --hr:hsl(240, 5%, 91%);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background: linear-gradient(to right,  var(--blue),var(--violet));
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--hr);
+    border-radius: 25px;
+    position: relative;
+}
+.sec1{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url(images/bg-pattern-desktop.svg);
+    transform: rotate();
+}
+.sec1 div{
+    overflow: hidden;
+}
+.sec1 .d1 img{
+    position: relative;
+    right: 20%;
+    height: 100%;
+}
+.sec1 .d2 img{
+    position: absolute;
+    right: 60%;
+    bottom: 10%;
+    transform: translate(-50%, -10%);
+    
+}
+.sec2{
+    width: 400px;
+}
+.sec2 article div{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.sec2 article div img{
+    height: fit-content;
+    cursor: pointer;
+
+}
+.sec2 article p{
+    display: none;
+    
+}
+.arrow{
+    transform: rotate(180deg);
+}
+.red{
+    color: #ff0000;
+}
+@media (max-width:375px) {
+    main{
+        display: grid;
+        grid-template-columns: 100%;
+        position: relative;
+    }
+    .sec2{
+        padding: 1%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .sec1 .d1 img{
+        position: relative;
+        right: 0;
+        top: -50px;
+    }
+    .sec1 .d2 img{
+        position: absolute;
+        right: 50%;
+        bottom: 20%;
+    }
+}
